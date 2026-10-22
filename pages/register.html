@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register — ClubHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<header id="topnav" class="topnav"></header>
+
+<div class="layout">
+
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <main class="main">
+
+        <div class="register-panel">
+            <h2>Create a student account</h2>
+            <div class="sub">Register to join clubs, RSVP to events, and more.</div>
+
+            <form id="registerForm" novalidate>
+                <div class="field">
+                    <label>Student ID</label>
+                    <input type="text" id="regStudentId" maxlength="20" required>
+                </div>
+                <div class="field">
+                    <label>Full name</label>
+                    <input type="text" id="regFullName" maxlength="100" required>
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" id="regEmail" maxlength="100" required>
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input type="password" id="regPassword" minlength="8" required>
+                </div>
+                <div class="field">
+                    <label>Phone number</label>
+                    <input type="text" id="regPhone" maxlength="15" required placeholder="+94771234567">
+                </div>
+                <div class="field">
+                    <label>Semester</label>
+                    <input type="text" id="regSemester" maxlength="20" placeholder="e.g. Semester 4" required>
+                </div>
+
+                <div style="display:flex;align-items:flex-start;gap:10px;margin:6px 0 20px;font-size:13.5px;color:var(--ink-soft);line-height:1.55">
+                    <input type="checkbox" id="regAcceptTerms" style="width:auto;margin-top:3px;flex-shrink:0">
+                    <label for="regAcceptTerms" style="cursor:pointer;margin:0;font-weight:400;color:var(--ink-soft)">
+                        I have read and agree to ClubHub's
+                        <a href="terms.html" target="_blank" style="color:var(--ink);font-weight:600;text-decoration:underline">Terms &amp; Conditions</a>
+                        and understand how my data is used.
+                    </label>
+                </div>
+
+                <div id="registerMessage" class="alert hidden"></div>
+
+                <button class="btn full" type="submit">Create account</button>
+            </form>
+
+            <div style="text-align:center;font-size:13px;color:var(--ink-soft);margin-top:16px">
+                Already have an account?
+                <a onclick="openLoginModal()" style="color:var(--ink);font-weight:600;text-decoration:underline;cursor:pointer">Sign in</a>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+<footer id="siteFooter"></footer>
+
+<script src="../js/common.js"></script>
+<script src="../js/register.js"></script>
+
+</body>
+</html>

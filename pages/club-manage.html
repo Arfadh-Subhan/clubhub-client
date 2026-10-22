@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage club — ClubHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<header id="topnav" class="topnav"></header>
+
+<div class="layout">
+
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <main class="main">
+
+        <div id="clubHeader"></div>
+
+        <div class="club-tab-strip" id="manageTabStrip">
+            <button class="club-tab active" onclick="switchManageTab('members', this)">Manage Members</button>
+            <button class="club-tab" onclick="switchManageTab('executives', this)">Manage Executive</button>
+            <button class="club-tab" onclick="switchManageTab('events', this)">Events</button>
+            <button class="club-tab" onclick="switchManageTab('posts', this)">Posts</button>
+            <button class="club-tab" onclick="switchManageTab('products', this)">Products</button>
+            <button class="club-tab" onclick="switchManageTab('announcements', this)">Announcements</button>
+            <button class="club-tab" onclick="switchManageTab('gallery', this)">Gallery</button>
+            <button class="club-tab" onclick="switchManageTab('edit-club', this)">Edit / Shut down</button>
+        </div>
+
+        <div id="tab-members" class="tab-pane"></div>
+        <div id="tab-executives" class="tab-pane" style="display:none"></div>
+        <div id="tab-events" class="tab-pane" style="display:none"></div>
+        <div id="tab-posts" class="tab-pane" style="display:none"></div>
+        <div id="tab-products" class="tab-pane" style="display:none"></div>
+        <div id="tab-announcements" class="tab-pane" style="display:none"></div>
+        <div id="tab-gallery" class="tab-pane" style="display:none"></div>
+        <div id="tab-edit-club" class="tab-pane" style="display:none"></div>
+
+    </main>
+
+</div>
+
+<footer id="siteFooter"></footer>
+
+<script src="../js/common.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js"></script>
+<script src="../js/club-manage.js"></script>
+
+</body>
+</html>
