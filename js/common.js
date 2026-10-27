@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:5009/api";
+const API_BASE_URL = "http://clubhub-api.runasp.net/api";
 const SESSION_KEY = "clubhub_user";
 
 function getCurrentUser() {
